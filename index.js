@@ -137,7 +137,6 @@ function Builder() {
         // ES5 doesn't natively support forEach AFAIK... 
         for(var i = 0; i < members.length; i++) {
             var divs = members[i].querySelectorAll('div');
-            console.log(divs);
             var memberData = {}
             for (var j = 0; j < divs.length; j++) {
                 var text = divs[j].innerText;
@@ -147,9 +146,6 @@ function Builder() {
             }
             data.members.push(memberData);
         }
-
-        console.log(JSON.stringify(data));
-
         return JSON.stringify(data);
     }
 
